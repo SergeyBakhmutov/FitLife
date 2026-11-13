@@ -46,21 +46,21 @@ while True:
 
 def calculate_bmi(weight, height):
     """Calculate the BMI based on the weight and height."""
-    bmi_index = weight / (height ** 2)
-    bmi_index = round(bmi_index, 1)
-    return bmi_index
+    return round(weight / (height ** 2), 1)
 
 
 def calculate_water_intake(weight):
     """Calculate the water intake based on the weight."""
     water_ml = weight * WATER_PER_KG
-    water_l = water_ml / 1000
-    return water_l
+    return water_ml / 1000
 
+
+bmi_result = calculate_bmi(weight, height)
+water_intake_result = calculate_water_intake(weight)
 
 print('\n----------------------')
 print(f'Отчет для пользователя: {user_name} ({user_age} г.)')
-print(f'Твой Индекс Массы Тела: {calculate_bmi(weight, height)}.')
-print(f'Рекомендуемая норма воды: {calculate_water_intake(weight)} л. в день. '
+print(f'Твой Индекс Массы Тела: {bmi_result}.')
+print(f'Рекомендуемая норма воды: {water_intake_result} л. в день. '
       f'\n \nРасчет окончен.'
       f' Будьте здоровы!')
