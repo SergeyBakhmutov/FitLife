@@ -14,7 +14,8 @@ while True:
         if MIN_AGE <= user_age <= MAX_AGE:
             break
         else:
-            print(f'Введите настоящий возраст в диапазоне от {MIN_AGE} до {MAX_AGE}.')
+            print(f'Введите настоящий возраст в диапазоне от '
+                  f'{MIN_AGE} до {MAX_AGE}.')
 
 while True:
     try:
