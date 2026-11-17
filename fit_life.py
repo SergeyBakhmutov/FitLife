@@ -1,5 +1,3 @@
-import time
-
 WATER_PER_KG = 30
 
 print("Добро пожаловать в приложение FitLife!")
