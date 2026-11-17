@@ -3,15 +3,12 @@ import time
 WATER_PER_KG = 30
 
 print("Добро пожаловать в приложение FitLife!")
-time.sleep(1.5)
-user_name = input('Как вас зовут? ')
-user_name = user_name.title().strip()
+user_name = input('Как вас зовут? ').title().strip()
 
 while True:
     try:
-        user_age = input('Сколько вам лет? ')
-        user_age = int(user_age)
-        if 1 <= int(user_age) <= 100:
+        user_age = int(input('Сколько вам лет? '))
+        if 1 <= user_age <= 100:
             break
         else:
             print('Введите настоящий возраст в диапазоне от 1 до 99')
@@ -21,24 +18,14 @@ while True:
 
 while True:
     try:
-        weight = input('Введите ваш вес в кг ')
-        if ',' in weight:
-            weight = weight.replace(',', '.')
-            weight = float(weight)
-        else:
-            weight = float(weight)
+        weight = float(input('Введите ваш вес в кг ').replace(',', '.'))
         break
     except ValueError:
         print('Введите вес в кг. Например, 70.5')
 
 while True:
     try:
-        height = input('Введите ваш рост в метрах ')
-        if ',' in height:
-            height = height.replace(',', '.')
-            height = float(height)
-        else:
-            height = float(height)
+        height = float(input('Введите ваш рост в метрах ').replace(',', '.'))
         break
     except ValueError:
         print('Введите ваш рост в метрах. Например, 1.8')
